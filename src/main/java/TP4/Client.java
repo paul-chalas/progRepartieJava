@@ -33,5 +33,6 @@ public class Client {
         Client client = new Client("10.203.9.145", 2000);
 
         client.getFile("image1.jpeg", "img.jpeg");
+        client.getFile("image2.jpeg", "img2.jpeg");
     }
 }
