@@ -13,6 +13,7 @@ public class ThreadServeurEcho extends Thread{
 
     @Override
     public void run() {
+
         BufferedReader in;
         BufferedWriter out;
         try{
@@ -29,7 +30,9 @@ public class ThreadServeurEcho extends Thread{
                 out.flush();
             }
             out.close();
+            in.close();
             client.close();
+
         } catch (IOException e){
             e.printStackTrace();
         }

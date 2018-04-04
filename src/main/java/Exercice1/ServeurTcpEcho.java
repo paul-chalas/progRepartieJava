@@ -24,7 +24,9 @@ public class ServeurTcpEcho {
         System.out.println("Serveur lancé sur le port " + port);
 
         for (int i = 1; i <= nbClients; i++) {
+
             client = server.accept();
+
             System.out.println("Client " + client.getInetAddress().getHostAddress());
 
             out = new BufferedWriter(new OutputStreamWriter(client.getOutputStream()));
